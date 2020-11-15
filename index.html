@@ -8,11 +8,13 @@
         * {
             background-color: black;
             color: #ccccff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         textarea {
             width: 20%;
             border: 1px solid #5600a5;
+            resize: none;
         }
 
         button {
@@ -73,8 +75,8 @@
         <div style="display: flex; flex-direction: column;">
             <div id="template" style="display: none">
                 <button style="flex: 1;" onclick="c(this);">X</button>
-                <textarea placeholder="Original name" style="flex: 10;"></textarea>
-                <textarea placeholder="New name" style="flex: 10;"></textarea>
+                <textarea placeholder="Original name" style="flex: 10;" spellcheck="false"></textarea>
+                <textarea placeholder="New name" style="flex: 10;" spellcheck="false"></textarea>
             </div>
         </div>
         <div id="console"></div>
