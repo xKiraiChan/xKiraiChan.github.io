@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | xKiraiChan.github.io</title>
+    <style>
+        * {
+            background-color: black;
+            color: #ccccff;
+        }
+
+        textarea {
+            width: 20%;
+            border: 1px solid #5600a5;
+        }
+
+        button {
+            flex: 1;
+            font-size: 3em;
+            border: 1px solid #5600a5;
+        }
+    </style>
+    <script>
+        function a(b) {
+            if (document.readyState != "complete")
+                window.onload = b;
+            else b();
+        }
+
+        function b() {
+            let c = document.getElementById("template")
+            let d = c.cloneNode(true);
+
+            d.id = "";
+            d.style.display = "flex";
+            d.children[0].className = "input-original";
+            d.children[1].className = "input-new";
+
+            c.parentNode.appendChild(d);
+        }
+
+        function c(a) {
+            a.parentNode.parentNode.removeChild(a.parentNode);
+        }
+
+        function d() {
+            let a = document.getElementsByClassName("input-original");
+            let b = document.getElementsByClassName("input-new");
+
+            let c = [];
+            
+            for (let e = 0; e < a.length; e++) {
+                c.push([a[e].value, b[e].value]);
+            }
+
+            document.getElementById("console").textContent = JSON.stringify(c);
+        }
+
+        a(() => {
+            b();
+        });        
+    </script>
+</head>
+<body>
+    <noscript>JavaScript is required for this page to operate.</noscript>
+    <div style="display: flex;">
+        <button onclick="b()">New row</button>
+        <button onclick="d()">Generate</button>
+    </div>
+    <br>
+    <div style="display: grid; grid-template-columns: 60% 40%;">
+        <div style="display: flex; flex-direction: column;">
+            <div id="template" style="display: none">
+                <button style="flex: 1;" onclick="c(this);">X</button>
+                <textarea placeholder="Original name" style="flex: 10;"></textarea>
+                <textarea placeholder="New name" style="flex: 10;"></textarea>
+            </div>
+        </div>
+        <div id="console"></div>
+    </div>
+</body>
+</html>
