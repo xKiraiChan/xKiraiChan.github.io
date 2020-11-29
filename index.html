@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | xKiraiChan.github.io</title>
+    <link rel="stylesheet" href="base.css">
     <style>
-        * {
-            background-color: black;
-            color: #ccccff;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
         textarea {
             width: 20%;
             border: 1px solid #5600a5;
@@ -59,12 +54,14 @@
             document.getElementById("console").textContent = JSON.stringify(c);
         }
 
-        a(() => {
-            b();
-        });        
+        a(b);
     </script>
 </head>
 <body>
+    <div id="header">
+        <a class="header-item" id="header-title" href="index.html">Kirai Chan's Utils</a>
+        <a class="header-item" href="clipboard.html">C&P</a>
+    </div>
     <noscript>JavaScript is required for this page to operate.</noscript>
     <div style="display: flex;">
         <button onclick="b()">New row</button>
