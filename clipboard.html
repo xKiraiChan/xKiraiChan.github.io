@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | xKiraiChan.github.io</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        button {
+            flex: 1;
+            font-size: 2em;
+            border: 1px solid #5600a5;
+        }
+
+        #slave {
+            width: 0px;
+            border: 0px;
+            resize: none;
+            padding: 0px;
+            height: 0px;
+        }
+    </style>
+    <script>
+        let a;
+
+        function b(c) {
+            if (document.readyState != "complete")
+                window.onload = c;
+            else c();
+        }
+
+        function c() {
+            a = document.getElementById("slave");
+        }
+
+        function d(b) {
+            a.value = b.textContent;
+            a.select();
+            document.execCommand("copy");
+        }
+
+        function e(b) {
+            a.value = b;
+            a.select();
+            document.execCommand("copy");
+        }
+
+        b(c);
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a class="header-item" id="header-title" href="index.html">Kirai Chan's Utils</a>
+        <a class="header-item" href="clipboard.html">C&P</a>
+        <textarea id="slave"></textarea>
+    </div>
+    <noscript>JavaScript is required for this page to operate.</noscript>
+    <button onclick="d(this);">SyncKill</button>
+    <button onclick="d(this);">SyncStart</button>
+    <button onclick="d(this);">SyncVotedOut</button>
+    <button onclick="d(this);">SyncVotedFor12</button>
+    <button onclick="d(this);">AssignTask</button>
+    <button onclick="d(this);">UnassignTask</button>
+    <button onclick="d(this);">RepairSabotage</button>
+    <hr>
+    <button onclick="e('avtr_6753d5b0-42d3-41b7-a177-442258e85562')">Black Paimon</button>
+    <button onclick="e('avtr_c6c149c6-1249-4dfb-ab1a-ebb7c4f24e3e')">SVH WC</button>
+    <button onclick="e('avtr_8eb01421-c607-4e43-b426-1395a4eeaf03')">Day WC</button>
+</body>
+</html>
