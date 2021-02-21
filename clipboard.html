@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="base.css">
     <style>
         button {
-            flex: 1;
             font-size: 2em;
             border: 1px solid #5600a5;
+			display:block;
+			width:99%;
         }
 
         #slave {
@@ -19,6 +20,8 @@
             padding: 0px;
             height: 0px;
         }
+		
+		.a{flex:1;}
     </style>
     <script>
         let a;
@@ -55,16 +58,17 @@
         <textarea id="slave"></textarea>
     </div>
     <noscript>JavaScript is required for this page to operate.</noscript>
-    <button onclick="d(this);">SyncKill</button>
-    <button onclick="d(this);">SyncStart</button>
-    <button onclick="d(this);">SyncVotedOut</button>
-    <button onclick="d(this);">SyncVotedFor12</button>
-    <button onclick="d(this);">AssignTask</button>
-    <button onclick="d(this);">UnassignTask</button>
-    <button onclick="d(this);">RepairSabotage</button>
-    <hr>
-    <button onclick="e('avtr_6753d5b0-42d3-41b7-a177-442258e85562')">Black Paimon</button>
-    <button onclick="e('avtr_c6c149c6-1249-4dfb-ab1a-ebb7c4f24e3e')">SVH WC</button>
-    <button onclick="e('avtr_8eb01421-c607-4e43-b426-1395a4eeaf03')">Day WC</button>
+	<div style="display:flex">
+		<div class="a">
+			<button onclick="d(this);">SyncKill</button>
+			<button onclick="d(this);">SyncStart</button>
+			<button onclick="d(this);">SyncVotedOut</button>
+			<button onclick="d(this);">SyncVotedFor12</button>
+			<button onclick="d(this);">AssignTask</button>
+			<button onclick="d(this);">UnassignTask</button>
+			<button onclick="d(this);">RepairSabotage</button>
+		</div>
+		</div>
+	</div>
 </body>
 </html>
